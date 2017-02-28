@@ -18,8 +18,11 @@ public class Simulador {
 		Runnable cCarr = empezarCarrera(Carrera.crearCarrera(TC.CARRETERA, numPart), tiempoA);
 		Runnable cMont = empezarCarrera(Carrera.crearCarrera(TC.MONTANA, numPart), tiempoA);
 		
-		new Thread(cCarr);
-		new Thread(cMont);
+		Thread t1 = new Thread(cCarr);
+		Thread t2 = new Thread(cMont);
+		
+		t1.start();
+		t2.start();
 	}
 
 	private static int randInt(int min, int max) {
@@ -52,9 +55,11 @@ public class Simulador {
 					while(running) {
 						++time;
 		    			Thread.sleep(1000);
+		    			if(time%5 == 0) System.out.println("Carrera "+tipoC+' '+time+"s.");
 		    			if(time == tiempoAcc){
+		    				System.out.println("Atención en el accidente !!!");
 		    				for(int i = participantes.size()-accidentes; i < participantes.size(); ++i){
-		    					participantes.remove(i);
+		    					participantes.set(i, null);
 		    				}
 		    			}
 		    			
@@ -62,7 +67,7 @@ public class Simulador {
 					}
 					System.out.println("Fin de la carrera de "+participantes.get(0).getTipo()+
     						"despues 60s :\n\tParticipantes al principio de la carrera: "+partPrin+
-    						"\n\tParticipantes al fin de la carrera: "+participantes.size()+
+    						"\n\tParticipantes al fin de la carrera: "+(participantes.size()-accidentes)+
     						"\n\t Total de "+accidentes+" accidentes despuès "+tiempoAcc+" segundos");
 				}catch(Exception e){
 					e.getStackTrace();
