@@ -5,7 +5,5 @@ import java.util.ArrayList;
  *
  */
 public interface Carrera {
-	public static ArrayList<Bicicleta> crearCarrera(TC tipo, int n){
-	    return null;
-	}
+	public ArrayList<Bicicleta> crearCarrera(TC tipo, int n);
 }
