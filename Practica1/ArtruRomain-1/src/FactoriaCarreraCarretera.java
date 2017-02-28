@@ -4,7 +4,7 @@ import java.util.ArrayList;
  * @author romainartru
  *
  */
-public class FactoriaCarreraCarretera extends FactoriaCarrera{
+public class FactoriaCarreraCarretera implements Carrera{
 	
     public static ArrayList<Bicicleta> crearCC(int n){
     	ArrayList<Bicicleta> participantes = new ArrayList<>();
