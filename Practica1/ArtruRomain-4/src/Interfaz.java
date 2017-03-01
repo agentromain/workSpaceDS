@@ -3,8 +3,9 @@ import javax.swing.*;
 
 @SuppressWarnings("serial")
 public class Interfaz extends JFrame{
-    public Interfaz(){
-        PanelBotones panel = new PanelBotones(); 
+	public Interfaz(){}
+    public Interfaz(Cliente cliente){
+        PanelBotones panel = new PanelBotones(cliente); 
         setTitle("Practica-1.4"); 
         setLocationRelativeTo(null);
         
@@ -24,6 +25,5 @@ public class Interfaz extends JFrame{
     public void ejecutar(double peticion){
         //this.pack();
         this.setVisible(true); 
-        System.out.println("Para un numero de vueltas iniciales del eje = "+peticion);
     }
 }

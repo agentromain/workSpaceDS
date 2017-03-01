@@ -21,15 +21,17 @@ public class CadenaFiltros {
     }
 
     public void ejecutar(double peticion){ 
-        for(Filtro filtro : filtros){
-            filtro.ejecutar(peticion);
-            System.out.println(filtro);
+        System.out.println("Para un numero de vueltas iniciales del eje = "+peticion);
+
+        for(Filtro filt : filtros){
+            filt.ejecutar(peticion);
+            System.out.println(filt);
         }
         objetivo.ejecutar(peticion);
     }
     
-    public void setObjetivo(Interfaz objetivo){ 
-        this.objetivo = objetivo;
+    public void setObjetivo(Interfaz obj){ 
+        objetivo = obj;
     }
     
     public void addFiltro(Filtro f){

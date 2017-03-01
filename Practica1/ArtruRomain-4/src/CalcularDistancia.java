@@ -7,7 +7,6 @@
  *
  */
 public class CalcularDistancia implements Filtro{
-
     /**
      * 
      */
@@ -18,14 +17,15 @@ public class CalcularDistancia implements Filtro{
     @Override
     public double ejecutar(Object o) {
         double rpm = (double) o;
-        double velocidad = Math.PI*DemoInterceptor.diametreRoue*rpm*Math.pow(10, 5);
+        double angulVelo = (2*Math.PI*(double)rpm/60);
+        double velocidad = angulVelo*DemoInterceptor.diametreRoue/100;
         DemoInterceptor.velocidad = velocidad;
-        double dist = DemoInterceptor.velocidad*(PanelBotones.d.getTime()-PanelBotones.startTime);
+        double dist = DemoInterceptor.velocidad*((System.currentTimeMillis()/1000)-DemoInterceptor.initTime);
         DemoInterceptor.distancia = dist;
         return dist;
     }
 
     public String toString(){
-        return "Nueva distancia (m) : "+DemoInterceptor.distancia;
+        return "Nueva distancia (m) : "+String.format("%.2f", DemoInterceptor.distancia);
     }
 }

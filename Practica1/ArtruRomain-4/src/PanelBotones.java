@@ -18,7 +18,9 @@ public class PanelBotones extends JPanel{
     private JLabel EtiqMostrarEstado; 
     public static final Date d = new Date(0); 
     public static long startTime;
-    public PanelBotones(){
+    private Cliente c;
+    public PanelBotones(Cliente cli){
+    	c = cli;
         BotonAcelerar = new JButton("Acelerar");
         BotonEncender = new JToggleButton("Encender");
         EtiqMostrarEstado = new JLabel("APAGADO", SwingConstants.CENTER);
@@ -67,11 +69,9 @@ public class PanelBotones extends JPanel{
             EtiqMostrarEstado.setText("Acelerando");
             BotonEncender.setText("Apagar");
             BotonAcelerar.setEnabled(true);
-            startTime = d.getTime();
+            DemoInterceptor.initTime = System.currentTimeMillis()/1000;
             DemoInterceptor.distancia = 0;
-            DemoInterceptor.rpm = 0;
-            DemoInterceptor.velocidad = 0;
-            System.out.println("Boutons allumer appuyé !");
+            DemoInterceptor.rpm = 100;
         } else{
             BotonEncender.setForeground(Color.RED);
             EtiqMostrarEstado.setText("Apagado");
@@ -82,8 +82,7 @@ public class PanelBotones extends JPanel{
     
     synchronized private void BotonAcelerarActionPerformed(ActionEvent evt){
             DemoInterceptor.rpm += 10;
-            DemoInterceptor.cliente.enviarPeticion(DemoInterceptor.rpm);
-            System.out.println("Boutons accelerer appuyé !");
+            c.enviarPeticion(DemoInterceptor.rpm);
             
     }
 }
