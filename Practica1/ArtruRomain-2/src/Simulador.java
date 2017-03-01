@@ -19,7 +19,7 @@ public class Simulador extends Observable implements Runnable {
 		    e.printStackTrace();
 		  }
 
-		  oP.notifyObservers();
+		  oP.notifyObservers(temperatura);
 
 		}
 	}
