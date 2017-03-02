@@ -1,5 +1,19 @@
+import java.util.ArrayList;
 
 public abstract class Observable {
-	public abstract void incluirObservador(Observador o);
-	public abstract void notificarObsrevadores();
+	private ArrayList<Observador> obs;
+	
+	public Observable() {
+		// TODO Auto-generated constructor stub
+		obs = new ArrayList<>();
+	}
+	
+	public void incluirObservador(Observador o){
+		obs.add(o);
+	}
+	public void notificarObsrevadores(int temp){
+		for (Observador observador : obs){
+			observador.actualizar(temp);
+		}
+	}
 }

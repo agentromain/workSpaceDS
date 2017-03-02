@@ -1,18 +1,27 @@
-import java.util.Observable;
-import java.util.Observer;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
 
-public class BotonCambio implements Observer {
+@SuppressWarnings("serial")
+public class BotonCambio extends JPanel implements ObservadorConEvento {
+	private JLabel lab;
+	private JTextArea textEntry;
 
 	public BotonCambio() {
 		// TODO Auto-generated constructor stub
+		lab = new JLabel("Nueva temperatura :");
+		textEntry = new JTextArea(); 
 	}
-	
-	@Override
-	public void update(Observable o, Object arg) {
+
+	public void manejarEvento() {
 		// TODO Auto-generated method stub
-		int temp = (int)arg;
+		//refrecarPantalla();
+	}
+
+	@Override
+	public void actualizar(int tempAct) {
+		// TODO Auto-generated method stub
 		
-		System.out.println(temp);
 	}
 
 }

@@ -1,16 +1,11 @@
-import java.util.Observable;
-
 public class ObservablePantalla extends Observable {
-	public ObservablePantalla() {
+	public static Pantalla panta;
+	
+	public ObservablePantalla(Pantalla p) {
 		// TODO Auto-generated constructor stub
-		this.addObserver(new BotonCambio());
-		this.addObserver(new GraficaTemperatura());
-		this.addObserver(new TiempoSatelital());
+		panta = p;
+		this.incluirObservador(new BotonCambio());
+		this.incluirObservador(new GraficaTemperatura());
 	}
-	public void incluirObservador(Observador o){
-		
-	}
-	public void notificarObsrevadores(){
-		
-	}
+
 }
