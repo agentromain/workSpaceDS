@@ -7,4 +7,10 @@ public class ObservablePantalla extends Observable {
 		this.addObserver(new GraficaTemperatura());
 		this.addObserver(new TiempoSatelital());
 	}
+	public void incluirObservador(Observador o){
+		
+	}
+	public void notificarObsrevadores(){
+		
+	}
 }
