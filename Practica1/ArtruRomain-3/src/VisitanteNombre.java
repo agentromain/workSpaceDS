@@ -1,12 +1,12 @@
 
 public class VisitanteNombre extends VisitanteEquipo {
 	private String nombre;
-	
+
 	public VisitanteNombre() {
 		// TODO Auto-generated constructor stub
 		nombre = "";
 	}
-	
+
 	@Override
 	public void VisitarDisco(Disco d) {
 		// TODO Auto-generated method stub

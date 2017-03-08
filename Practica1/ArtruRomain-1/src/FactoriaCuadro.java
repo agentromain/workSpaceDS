@@ -7,7 +7,7 @@
  *
  */
 public interface FactoriaCuadro {
-    public static Cuadro<?> crearCuadro(){
-        return null;
-    }
+	public static Cuadro<?> crearCuadro(){
+		return null;
+	}
 }

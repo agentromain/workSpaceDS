@@ -7,9 +7,9 @@
  *
  */
 public class Ruedas<N extends Enum<N>>{
-    N tipo;
-    
-    public Ruedas(N t){
-        tipo = t;
-    }
+	N tipo;
+
+	public Ruedas(N t){
+		tipo = t;
+	}
 }

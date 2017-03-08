@@ -1,24 +1,24 @@
 public abstract class Equipo{
 
-  private String nombre;
-  private double precio;
+	private String nombre;
+	private double precio;
 
-  public Equipo(String no, double pr){
+	public Equipo(String no, double pr){
 
-    nombre= no; 
-    precio = pr;
+		nombre= no; 
+		precio = pr;
 
-  }
+	}
 
-  public String toString(){
-	  return nombre;
-  }
+	public String toString(){
+		return nombre;
+	}
 
-  public double getPrecio(){
-	  return precio;
-  }
+	public double getPrecio(){
+		return precio;
+	}
 
-  public abstract void aceptar(VisitanteEquipo ve);
+	public abstract void aceptar(VisitanteEquipo ve);
 
 }
 

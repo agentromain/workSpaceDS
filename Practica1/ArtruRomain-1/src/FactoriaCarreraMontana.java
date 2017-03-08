@@ -6,10 +6,10 @@ import java.util.ArrayList;
  */
 public class FactoriaCarreraMontana implements Carrera{
 	public static ArrayList<Bicicleta> crearCM(int n){
-    	ArrayList<Bicicleta> participantes = new ArrayList<>();
-    	for(int i = 0; i < n; ++i){
-    		participantes.add(FactoriaBiciMont.crearBici());
-    	}
+		ArrayList<Bicicleta> participantes = new ArrayList<>();
+		for(int i = 0; i < n; ++i){
+			participantes.add(FactoriaBiciMont.crearBici());
+		}
 		return participantes;
 	}
 }

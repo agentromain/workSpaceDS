@@ -6,7 +6,7 @@ public class VisitantePrecio extends VisitanteEquipo {
 		// TODO Auto-generated constructor stub
 		precio = 0;
 	}
-	
+
 	@Override
 	public void VisitarDisco(Disco d) {
 		// TODO Auto-generated method stub

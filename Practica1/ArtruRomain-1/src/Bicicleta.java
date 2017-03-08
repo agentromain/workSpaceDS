@@ -17,11 +17,11 @@ public abstract class Bicicleta {
 	public Bicicleta(TC t){
 		tipo = t;
 	}
-	
+
 	TC getTipo(){
 		return tipo;
 	}
-	
+
 	void setTipo(TC t){
 		tipo = t;
 	}

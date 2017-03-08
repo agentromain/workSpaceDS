@@ -9,7 +9,7 @@ public class Main {
 		sim.incluirObservador(bot);
 		Pantalla p = new Pantalla(bot, sim);
 		sim.incluirObservador(p);
-		
+
 		Thread t = new Thread(sim);
 		t.start();
 	}

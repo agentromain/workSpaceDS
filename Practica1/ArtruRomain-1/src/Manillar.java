@@ -7,9 +7,9 @@
  *
  */
 public class Manillar<N extends Enum<N>>{
-    N tipo;
+	N tipo;
 
-    public Manillar(N t){
-        tipo = t;
-    }
+	public Manillar(N t){
+		tipo = t;
+	}
 }
