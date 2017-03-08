@@ -53,9 +53,9 @@ public class Pantalla extends JFrame implements Observador {
 	}
 
 	@Override
-	public void actualizar(int tempAct) {
+	public void manejarEvento(int tempAct) {
 		// TODO Auto-generated method stub
 		temp.setText(tempAct+"ºC");
-		graf.actualizar(tempAct);
+		graf.manejarEvento(tempAct);
 	}
 }

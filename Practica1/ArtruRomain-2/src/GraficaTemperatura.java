@@ -55,7 +55,7 @@ public class GraficaTemperatura implements Observador{
 	}
 
 	@Override
-	public void actualizar(int tempAct) {
+	public void manejarEvento(int tempAct) {
 		// TODO Auto-generated method stub
 		temperaturaActual = tempAct;
 		float[] newData = new float[1];

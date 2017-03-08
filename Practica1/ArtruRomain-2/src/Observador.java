@@ -1,5 +1,5 @@
 
 public interface Observador {
 
-	public void actualizar(int tempAct);
+	public void manejarEvento(int tempAct);
 }

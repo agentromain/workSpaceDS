@@ -13,7 +13,7 @@ public abstract class Observable {
 	}
 	public void notificarObsrevadores(int temp){
 		for (Observador observador : obs){
-			observador.actualizar(temp);
+			observador.manejarEvento(temp);
 		}
 	}
 }
