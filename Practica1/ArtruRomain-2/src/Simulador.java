@@ -1,37 +1,45 @@
-import java.util.ArrayList;
+//import java.util.ArrayList;
 import java.util.Random;
 
 public class Simulador extends Observable implements Runnable {
-	private ObservablePantalla oP;
 	private int tempActual;
-	private ArrayList<Integer> temperaturas;
+	//private ArrayList<Integer> temperaturas;
+	private int refrTime;
 	
-	public Simulador(Pantalla p) {
+	public Simulador() {
 		// TODO Auto-generated constructor stub
 		super();
-		oP = new ObservablePantalla(p);
-		temperaturas = new ArrayList<>();
-		
-		this.incluirObservador(new BotonCambio());
-		this.incluirObservador(new GraficaTemperatura());
-		this.incluirObservador(new Pantalla());
+		//temperaturas = new ArrayList<>();
+		refrTime = 500;
 	}
 	
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
 		Random r= new Random(System.currentTimeMillis());
-		
+		int milesimas = 0;
 		while (true){
-
+			try {
+				Thread.sleep(5);
+			    milesimas += 5;
+			} catch (InterruptedException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			if(milesimas%refrTime == 0){
+	    		//actualizaTemperaturaMinMax();
+	    		notificarObsrevadores(tempActual);
+	    	}
 		  tempActual= r.nextInt();
 
 		  try {Thread.sleep(60);}
 		  catch(java.lang.InterruptedException e){
 		    e.printStackTrace();
 		  }
-
-		  oP.notificarObsrevadores(tempActual);
 		}
+	}
+	
+	public int getTemperaturaActual(){
+		return tempActual;
 	}
 }
