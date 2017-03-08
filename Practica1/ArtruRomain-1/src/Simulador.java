@@ -51,6 +51,8 @@ public class Simulador {
 					case MONTANA:
 						accidentes = Math.round((participantes.size() * 20)/100);
 					}
+					
+					System.out.println("3...2...1... GO!");
 
 					while(running) {
 						++time;

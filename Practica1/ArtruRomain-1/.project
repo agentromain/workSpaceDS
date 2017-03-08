@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
 	<name>ArtruRomain-1</name>
-	<comment>@key 32303037303533312D3130204172747275526F6D61696E2D312F726F6D61696E6172747275 </comment>
+	<comment></comment>
 	<projects>
 	</projects>
 	<buildSpec>
@@ -10,14 +10,8 @@
 			<arguments>
 			</arguments>
 		</buildCommand>
-		<buildCommand>
-			<name>com.soyatec.additional.Builder</name>
-			<arguments>
-			</arguments>
-		</buildCommand>
 	</buildSpec>
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
-		<nature>com.soyatec.additional.Nature</nature>
 	</natures>
 </projectDescription>
