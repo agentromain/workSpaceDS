@@ -4,10 +4,15 @@
  *
  */
 public abstract class Bicicleta {
+
 	TC tipo;
+
 	Cuadro<?> cuad;
+
 	Manillar<?> man;
+
 	Ruedas<?> rued1;
+
 	Ruedas<?> rued2;
 
 	/**
