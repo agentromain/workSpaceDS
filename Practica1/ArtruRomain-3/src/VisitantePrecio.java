@@ -1,6 +1,6 @@
 
 public class VisitantePrecio extends VisitanteEquipo {
-		int precio;
+	private	double precio;
 
 	public VisitantePrecio() {
 		// TODO Auto-generated constructor stub
@@ -16,13 +16,16 @@ public class VisitantePrecio extends VisitanteEquipo {
 	@Override
 	public void VisitarTarjeta(Tarjeta t) {
 		// TODO Auto-generated method stub
-
+		precio += t.getPrecio();
 	}
 
 	@Override
 	public void VisitarBus(Bus b) {
 		// TODO Auto-generated method stub
-
+		precio += b.getPrecio();
 	}
 
+	public double getPrecio(){
+		return precio;
+	}
 }

@@ -10,17 +10,13 @@ public abstract class Equipo{
 
   }
 
-  public String nombre(){
-
-    return nombre+" "+precio;
-
-  }
-
   public String toString(){
 	  return nombre;
   }
 
-  public abstract double getPrecio();
+  public double getPrecio(){
+	  return precio;
+  }
 
   public abstract void aceptar(VisitanteEquipo ve);
 
